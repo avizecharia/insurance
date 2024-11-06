@@ -1,15 +1,22 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { approveClaim } from "./redux/store";
+import Nav from "./componets/Nav";
+import Header from "./componets/Header";
+import Page from "./componets/Pages/Page";
 
 export default function App() {
-  const y = useSelector((st: any) => st.treasure);
-  const dis = useDispatch();
-  useEffect(() => {
-    setTimeout(() => {
-      console.log();
-      dis(approveClaim({ id: "", amount: 10000}), 2500);
-    });
-  }, []);
-  return <div>App{y}</div>;
+  return (
+    <div className="app">
+      <header>
+        <Header />
+      </header>
+      <aside>
+        <Nav />
+      </aside>
+      <main>
+        <Page />
+      </main>
+    </div>
+  );
 }

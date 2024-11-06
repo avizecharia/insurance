@@ -1,8 +1,30 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 400;
+}
+
+.app {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 20% auto;
+  grid-template-columns: 10% auto;
+  grid-template-areas: "h h", "a m";
+}
+
+.app > * {
+  border: 1px solid;
+}
+.app > header {
+  grid-area: h;
+}
+.app > aside {
+  grid-area: a;
+}
+.app > main {
+  grid-area: m;
 }
